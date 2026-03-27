@@ -4,44 +4,37 @@ import "./App.css";
 
 function App() {
   // 2. Create weather state with default "Sunny"
-const[weather, setWeather] = usestate("sunny")
-
-
-  // 3. import useEffect from React
-
+  const[weather, setWeather] = useState("sunny")
 
 
   // 4. Create handleRainy function
   // change weather to "Rainy"
-
-const handleRainy = () =>{
-  setWeather("Rainy")
-}
+  const handleRainy = () =>{
+    setWeather("Rainy")
+  }
 
   // 5. Create handleSnowy function
   // change weather to "Snowy"
-const handleSnowy = () =>{
-  setWeather("Snowy")
-}
-
+  const handleSnowy = () =>{
+    setWeather("Snowy")
+  }
 
   // 6. Create handleHot function
   // change weather to "Hot"
-const handleHot = () =>{
-  changeWeatherWeather("Hot")
-}
-
+  const handleHot = () =>{
+    setWeather("Hot")
+  }
 
   // 7. Create handleReset function
   // change weather back to "Sunny"
-const handleReset = () =>{
-  changeWeather("sunny")
-}
+  const handleReset = () =>{
+    setWeather("Sunny")
+  }
 
 
   // 8. Add useEffect that runs when weather changes
   // show alerts based on weather value
-useEffect(() => {
+  useEffect(() => {
     if (weather === "Rainy") {
       alert("Take an umbrella.");
     } else if (weather === "Snowy") {
@@ -70,7 +63,7 @@ useEffect(() => {
 
           <button
             className="btn"
-             onClick={handleRainy}
+            onClick={handleRainy}
             // 10. connect to handleRainy
           >
             Rainy 🌧️
